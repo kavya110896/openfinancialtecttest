@@ -1,0 +1,33 @@
+
+<nav class="navbar fixed-top navbar-light bg-light" (scroll)="onWindowScroll($event);">
+    <div class="row pic">
+        <div class="col-md-12">
+            <img class="logo" alt="logo" src="../../assets/logo/logo.png">
+        </div>
+    </div>
+
+    <div class="row links">
+        <div class="col-md-4">
+            <span class="link">Products</span>
+        </div>
+        <div class="col-md-4">
+            <span class="link">Solutions</span>
+        </div>
+        <div class="col-md-4">
+            <span class="link">Pricing</span>
+        </div>
+
+    </div>
+    <div class="row buttn">
+        <div class="col-md-4">
+            <button type="button" class="btn btn-outline-primary login">Login</button>
+        </div>
+        &nbsp;&nbsp;&nbsp;
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary start">Get Started</button>
+        </div>
+    </div>
+</nav>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,79 @@
+.bttn {
+  margin-left: 80%;
+}
+
+.login {
+    top: 63px;
+    left: 1480px;
+    width: 118px;
+    height: 45px;
+    box-shadow: 0px 0px 20px #00000033;
+    border: 2px solid #663399;
+    color: #663399;
+    border-radius: 24px;
+    opacity: 1;
+    font-size: 15px;
+
+}
+
+.login:hover {
+  color: white;
+  background-color: #663399;
+  border-color: #663399;
+}
+
+.start {
+  top: 63px;
+  left: 1622px;
+  width: 166px;
+  height: 45px;
+  background: transparent linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: 0px 0px 20px #00000033;
+  border-radius: 24px;
+  opacity: 1;
+  font-size: 15px;
+
+}
+
+.start:hover {
+  color: white;
+  background: #663399;
+  border-color: #663399;
+}
+
+.pic {
+  // margin-left: -25%;
+}
+
+.logo {
+  height: 45px;
+  width: 50px;
+}
+
+.link {
+  text-align: left;
+  font: normal normal normal 25px/34px Open Sans;
+  letter-spacing: 0px;
+  color: #222222;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.link:hover{
+    color: #663399;
+}
+
+.links{
+    margin-left: 40%;
+}
+
+
+::ng-deep .bg-light{
+  background-color: transparent!important;
+}
+
+::ng-deep .navbar-inverse{
+  background-color: white!important;
+  border-color: white!important;
+}

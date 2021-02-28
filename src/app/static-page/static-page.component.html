@@ -1,0 +1,213 @@
+<div class="col-md-12">
+    <div class="row">
+
+        <div class="col-md-5 leftPart">
+            <div class="simple">
+                <img alt="simples" class="img1" src="../../assets/We make it Super Sim/We make it Super Sim@2x.png">
+            </div>
+            <br>
+            <div class="singleLine">
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="img2">
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="calculator">
+              
+               <div class="heads"> Eligibility Calculator</div>
+                <div class="head">
+                    <div class="part1">
+                    <span class="inc">Monthly Income</span>
+                    <br>
+                    <span class="digit">₹{{monthVal}}</span>
+                    <br>
+                    <mat-slider class="monInc" color="primary" min="10000" max="300000" step="10000" value="200000" (change)="itChanged($event.value)"></mat-slider>
+                    <span class="minVal">₹100000</span>
+                    <span class="maxVal">₹300000</span>
+
+                </div>
+               
+                <div class="part2">
+                    <span class="inc">Monthly Expense</span>
+                    <br>
+                    <span class="digit">₹{{monthInc}}</span>
+                    <br>
+                    <mat-slider class="monInc" color="primary" min="10000" max="100000" step="10000" value="20000" (change)="itChanged2($event.value)"></mat-slider>
+                </div>
+
+                <div class="part3">
+                    <span class="inc">Repayment Tenure</span>
+                    <br>
+                    <mat-form-field class="monInc" appearance="fill">
+                     <mat-select [(ngModel)]="vals">
+                        <mat-option *ngFor="let val of values"  [value]="val.value">
+                          {{val.viewValue}}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="part4">
+                    <span class="inc">Do You have any existing loans?</span> <mat-slide-toggle  color="primary" style="margin-left: 10%;"></mat-slide-toggle>
+                   
+                </div>
+
+                <div class="part5">
+                    <span class="inc">EMI OF existing loans(optional)</span>
+                   <br>
+                   
+                   <mat-form-field class="example">
+                    <input matInput placeholder="Enter EMI">
+                    </mat-form-field>
+                </div>
+
+
+                </div>
+                <div class="loan">
+                   
+                    <div class="loanAmt">Loan Amount</div>
+                   
+                    <div class="amt">₹1,00,000</div>
+        
+
+                    <div class="emiAmt">Your EMI will be</div>
+                   
+                    <div class="amt">₹15,000</div>
+
+                    <button type="button" class="btn btn-outline-primary getMon">GET MONEY</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<br>
+<br>
+
+<div class="col-md-12 secondHalf">
+    <div class="col-md-6 secondHalf">
+        <div class="card1">
+            <div class="pic1">
+                <img alt="int" src="../../assets/Get Paid Instantly/Get Paid Instantly.png">
+            </div>
+            <br>
+            <div class="head1">
+                Quick cash disbursement
+            </div>
+            <br>
+            <div class="text1">
+                Get terms loans that your business needs within 72 hours
+            </div>
+
+        </div>
+
+        <div class="card2">
+
+            <div class="pic2">
+                <img alt="int" src="../../assets/Low interest rate/Low interest rate.png">
+            </div>
+
+            <br>
+            <div class="head2">
+                Low-interest rate
+            </div>
+
+            <br>
+            <div class="text2">
+                Achieve your financial goals with an amazing intrest rate starting at 13% per annum
+            </div>
+
+
+        </div>
+
+        <div class="card3">
+
+            <div class="pic3">
+                <img alt="int" src="../../assets/Secure Payments/Secure Payments.png">
+            </div>
+
+            <br>
+            <div class="head3">
+                Zero Paperwork
+            </div>
+
+            <br>
+            <div class="text3">
+                Get started instantly by submitting only your basic details & bank statements
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3 secondHalf2">
+        <div class="card4">
+
+            <div class="pic4">
+                <img alt="int" src="../../assets/freelancer_feature_icon_6@1.5x/freelancer_feature_icon_6@1.5x.png">
+            </div>
+            <br>
+            <div class="head4">
+                Ace your business finances
+            </div>
+
+            <br>
+            <div class="text4">
+                Manage banking accounting & everything in between, on one platform
+            </div>
+
+
+        </div>
+
+        <div class="card5">
+
+            <div class="pic5">
+                <img alt="int" src="../../assets/Covid/Covid.png">
+            </div>
+            <br>
+            <div class="head5">
+                Loans to fight COVID-19
+            </div>
+
+            
+            <br>
+            <div class="text5">
+                Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3 secondHalf3">
+        <div class="boost">
+            <img alt="boost" src="../../assets/Boost your business/Boost your business.png">
+        </div>
+        <br>
+        <div class="secondLine">
+
+        </div>
+        <br>
+        <div class="hands">
+            <img alt="hands" src="../../assets/Get your hands on a/Get your hands on a.png">
+        </div>
+
+        <br>
+
+        <div class="account">
+            <button type="button" class="btn btn-outline-primary openAcc">Get an Open Account</button>
+        </div>
+    </div>
+</div>

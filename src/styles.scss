@@ -1,0 +1,1382 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.overlay {
+  margin-top: 6%;
+  margin-left: 50%;
+  text-align: center;
+}
+
+html,
+body {
+  width: 100%;
+  /* Full width */
+  // min-width: 1280px;
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover {
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  margin: 32px auto;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+svg.material-icons {
+  height: 24px;
+  width: auto;
+}
+
+svg.material-icons:not(:last-child) {
+  margin-right: 8px;
+}
+
+.card svg.material-icons path {
+  fill: #888;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-container .card:not(:last-child) {
+  margin-right: 0;
+}
+
+.card.card-small {
+  height: 16px;
+  width: 168px;
+}
+
+.card-container .card:not(.highlight-card) {
+  cursor: pointer;
+}
+
+.card-container .card:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(black, 0.35);
+}
+
+.card-container .card:not(.highlight-card):hover .material-icons path {
+  fill: rgb(105, 103, 103);
+}
+
+.card.highlight-card {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+}
+
+.card.card.highlight-card span {
+  margin-left: 60px;
+}
+
+svg#rocket {
+  width: 80px;
+  position: absolute;
+  left: -10px;
+  top: -24px;
+}
+
+svg#rocket-smoke {
+  height: 100vh;
+  position: absolute;
+  top: 10px;
+  right: 180px;
+  z-index: -10;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+.terminal {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 6px;
+  padding-top: 45px;
+  margin-top: 8px;
+  overflow: hidden;
+  background-color: rgb(15, 15, 16);
+}
+
+.terminal::before {
+  content: "\2022 \2022 \2022";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: rgb(58, 58, 58);
+  color: #c2c3c4;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 0;
+  padding: 14px 0;
+  text-indent: 4px;
+}
+
+.terminal pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+.circle-link {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  margin: 8px;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 1s ease-out;
+}
+
+.circle-link:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+::ng-deep ul > li:before {
+  visibility: hidden;
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+.github-star-badge {
+  color: #24292e;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 3px 10px;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  border-radius: 3px;
+  background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+  margin-left: 4px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.github-star-badge:hover {
+  background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+  border-color: rgba(27, 31, 35, 0.35);
+  background-position: -0.5em;
+}
+
+.github-star-badge .material-icons {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+  .card-container > *:not(.circle-link),
+  .terminal {
+    width: 100%;
+  }
+  .card:not(.highlight-card) {
+    height: 16px;
+    margin: 8px 0;
+  }
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+  svg#rocket-smoke {
+    right: 120px;
+    transform: rotate(-5deg);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* Adding in main css */
+
+.lowerContainer {
+  width: 100%;
+  /* min-width: 1280px; */
+  min-height: 975px;
+  height: auto;
+  background-color: #eceff6;
+  position: absolute;
+  top: 108px;
+  left: 0;
+  overflow: hidden;
+}
+
+.setupscardContainer {
+  width: 100%;
+  /* min-width: 1280px; */
+  min-height: 975px;
+  height: auto;
+  background-color: #eceff6;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+}
+.cardLine {
+  width: 100%;
+  height: 101px;
+  // min-width: 1280px;
+  min-height: 101px;
+  height: auto;
+  margin-left: 65px;
+  margin-top: 31px;
+}
+
+.cardContainer {
+  width: 208px;
+  height: 101px;
+  background-color: #9c79cc;
+  margin-right: 47px;
+  margin-bottom: 31px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  float: left;
+}
+
+/*cards for the setups and stores*/
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin: 10px;
+  background-color: #5a87b8;
+}
+
+.cardContainer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.configImg {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  color: #ffffff;
+}
+
+.configText {
+  margin-left: 18px;
+  margin-top: 59px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* Track */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 50%;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.componentHeader {
+  width: 100%;
+  // min-width: width 1280px;
+  height: 52px;
+  box-shadow: 5px 5px 18px #f1f1f1;
+  background-color: #ffffff;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.componentTitle {
+  position: relative;
+  font-size: 25px;
+  font-weight: normal;
+  color: #2f2f30;
+  margin: 8px 20px;
+  width: 210px;
+  float: left;
+}
+
+.componentTitleBox {
+  position: relative;
+  float: right;
+  width: 700px;
+  height: 52px;
+}
+
+.labelTextContainerButton {
+  position: relative;
+  width: 133px;
+  margin: 0px;
+  margin-right: 20px;
+  height: 52px;
+  float: right;
+}
+
+.buttonPrimary {
+  width: 133px;
+  height: 42px;
+  border-radius: 6px;
+  background-color: #0b3370;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonFetchData {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.mainContent {
+  width: 100%;
+  padding: 0px 20px;
+  margin-top: 20px;
+}
+
+.boxBackGround {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 30rem;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.pull-left {
+  float: left;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+hr.line {
+  height: 1px;
+  border: none;
+  color: #888888;
+  background-color: #aaaaaa;
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tableHeader {
+  width: 100%;
+  /* min-width: width 1280px; */
+  height: 35px;
+  font-size: 12px;
+  font-weight: medium;
+  background-color: #f6f7fa;
+}
+
+.table {
+  width: 100%;
+  /* min-width: width 1280px; */
+}
+
+.tableRow {
+  width: 100%;
+  /* min-width: width 1280px; */
+  height: 25px;
+  font-size: 13px;
+  font-weight: normal;
+  background-color: #ffffff;
+}
+
+.iconDiv {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  float: left;
+  margin-right: 0px;
+}
+
+.iconDiv:hover {
+  color: #0000ff;
+  cursor: pointer;
+}
+
+td {
+  padding: 5px 5px !important;
+  margin: 0px !important;
+}
+
+th {
+  padding: 5px 5px !important;
+  margin: 0px !important;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid black;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  border: 1px solid #888;
+  width: 781px;
+  border-radius: 0px;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.popupTitle {
+  font-weight: medium;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2b2b2b;
+  margin-top: 20px;
+  margin-left: 38px;
+}
+
+.popupRow {
+  position: relative;
+  width: 725px;
+  height: 70px;
+  margin: 5px 8px;
+}
+
+.popupBottom {
+  position: relative;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.popupBottomPadding {
+  padding: 10px 38px;
+  width: 100%;
+  height: 425px;
+  overflow-y: auto;
+  background-color: #ebeff5;
+}
+
+.popupButtonContainer {
+  height: 70px;
+  width: 100%;
+  padding: 15px 38px;
+  background-color: #ebeff5;
+}
+
+.popupButtonPrimary {
+  width: 103px !important;
+  height: 43px !important;
+  border-radius: 6px !important;
+  background-color: #0b3370 !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  outline: none !important;
+  border: none !important;
+  float: right !important;
+  cursor: pointer !important;
+}
+
+.popupButtonAdd {
+  width: 60px !important;
+  height: 43px !important;
+  border-radius: 6px !important;
+  background-color: #0b3370 !important;
+  color: #ffffff !important;
+  font-size: 30px !important;
+  outline: none !important;
+  border: none !important;
+  float: right !important;
+  cursor: pointer !important;
+}
+
+.popupButtonDisable {
+  width: 103px !important;
+  height: 43px !important;
+  border-radius: 6px !important;
+  background-color: grey !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  outline: none !important;
+  border: none !important;
+  float: right !important;
+  cursor: pointer !important;
+}
+
+.storePopupbuttonGap {
+  margin-left: 10px;
+}
+
+.labelTextContainerPopup {
+  position: relative;
+  width: 327px;
+  height: 80px;
+  float: left;
+}
+
+.componentTitleTextboxPopup {
+  position: absolute;
+  width: 327px;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  color: #2c2c2c;
+  outline: none;
+  padding: 0px 10px;
+}
+
+.labelGap {
+  margin-left: 20px;
+}
+
+.componentTitleLabelPopup {
+  font-size: 13px;
+  color: #888888;
+  font-weight: medium;
+}
+
+.componentValidation {
+  position: relative;
+  width: 327px;
+  font-size: 13px;
+  margin-top: 42px;
+  color: #ff0000;
+}
+
+.ngx-dropdown-button {
+  position: absolute !important;
+  width: 100% !important;
+  height: 42px !important;
+  border: 1px solid #cccccc;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  color: #9e9e9e !important;
+  outline: none !important;
+  padding: 0px 10px !important;
+}
+
+.ngx-dropdown-list-container {
+  font-size: 14px !important;
+  position: absolute !important;
+  margin-top: 0px !important;
+  width: 100% !important;
+  /* height: 300px !important; */
+}
+
+/* The container */
+
+.checkContainer {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #aaa;
+}
+
+/* On mouse-over, add a grey background color */
+
+.checkContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.checkContainer input:checked ~ .checkmark {
+  background-color: #0b3370;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.checkContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.checkContainer .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.createTripMap {
+  min-height: 10rem;
+  border: 0.1rem solid #92c7e6;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.historyTemplate {
+  margin: 20px 0px;
+}
+
+.historyHeading {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.lineClass {
+  border-top: 1px solid black;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.historyData {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.leftPane {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 725px;
+  background-color: #ffffff;
+}
+
+.centerPane {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 358px;
+  background-color: #ffffff;
+}
+
+.dashboardRow {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.divCenterText {
+  text-align: left;
+
+  font-size: 18px;
+  height: 35px;
+}
+
+hr.line {
+  height: 1px;
+  border: none;
+  color: #888888;
+  background-color: #aaaaaa;
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.chartContainer {
+  /* /* position: absolute;  */
+  margin-top: 10px;
+}
+
+.date-picker input {
+  display: block !important;
+  width: 100% !important;
+  height: calc(2.25rem + 6px) !important;
+  padding: 0.375rem 0.75rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  color: #495057 !important;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #ced4da !important;
+  border-left: none !important;
+  border-radius: 0px 4px 4px 0px !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  float: right;
+}
+
+.footer {
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #cccccc;
+}
+
+/* travis 1.0 css*/
+
+#topBanner {
+  // background-image: url("images/supergraphic_header__sm.svg");
+  width: 100%;
+  height: 15px;
+}
+body {
+  width: 100%;
+  height: 2145px !important;
+  background-color: #FCFCFF!important;
+
+  background-image: url("../src/assets/circle/circle.png"),
+   url("../src/assets/circle/circle.png"),
+   url("../src/assets/accounting_dots/accounting_dots.png"),
+   url("../src/assets/accounting_dots/accounting_dots.png"),
+   url("../src/assets/sol_wave_bg/sol_wave_bg@2x.png")
+   ;
+  background-repeat: no-repeat;
+  background-position: top -62vh left 80vh, top 15vh left -20vh, top 106vh left 60vh, bottom -10vh right 9vh, bottom -180vh center;
+  background-size: 75%,30%,20%,20%,100%;
+
+  
+  
+}
+header {
+  background: white;
+}
+
+.top-border-pink {
+  border-top: 3px solid #990073 !important;
+  border-radius: 0px;
+}
+.top-border-secondary {
+  border-top: 3px solid #007399 !important;
+  border-radius: 0px;
+}
+.top-border-green {
+  border-top: 3px solid #006249 !important;
+  border-radius: 0px;
+}
+.top-border-violet {
+  border-top: 3px solid #50237f !important;
+  border-radius: 0px;
+}
+
+.bg-pink {
+  color: #b90276 !important;
+}
+.bg-blue {
+  color: white !important;
+  background-color: #005691 !important;
+}
+.bg-secondary {
+  color: #007399 !important;
+}
+.text-green {
+  color: #006249 !important;
+}
+.text-violet {
+  color: #50237f !important;
+}
+
+.bg-warehouse-gradient {
+  background: linear-gradient(to right, #5c258d, #4389a2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2px;
+  padding-left: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(132, 23, 115, 1) 0%,
+    rgba(132, 23, 115, 1) 0%,
+    rgba(78, 11, 117, 1) 100%,
+    rgba(78, 11, 117, 1) 100%
+  );
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgb(132, 23, 115) 0%,
+    rgb(132, 23, 115) 0%,
+    rgb(78, 11, 117) 100%,
+    rgb(78, 11, 117) 100%
+  );
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  border: none;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+}
+.bg-plant-gradient {
+  background: linear-gradient(to right, #da4453, #89216b);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2px;
+  padding-left: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(227, 29, 26, 1) 0%,
+    rgba(227, 29, 26, 1) 0%,
+    rgba(181, 34, 115, 1) 100%,
+    rgba(181, 34, 115, 1) 100%
+  );
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgb(227, 29, 26) 0%,
+    rgb(227, 29, 26) 0%,
+    rgb(181, 34, 115) 100%,
+    rgb(181, 34, 115) 100%
+  );
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  border: none;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-radius: 0px;
+}
+.sm-box1 {
+  background: linear-gradient(
+    90deg,
+    rgba(227, 29, 26, 1) 0%,
+    rgba(227, 29, 26, 1) 0%,
+    rgba(181, 34, 115, 1) 100%,
+    rgba(181, 34, 115, 1) 100%
+  );
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgb(227, 29, 26) 0%,
+    rgb(227, 29, 26) 0%,
+    rgb(181, 34, 115) 100%,
+    rgb(181, 34, 115) 100%
+  );
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  border: none;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-radius: 0px;
+}
+.sm-box2 {
+  background: linear-gradient(
+    90deg,
+    rgba(180, 33, 114, 1) 0%,
+    rgba(180, 33, 114, 1) 0%,
+    rgba(130, 22, 115, 1) 100%,
+    rgba(130, 22, 115, 1) 100%
+  );
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgb(180, 33, 114) 0%,
+    rgb(180, 33, 114) 0%,
+    rgb(130, 22, 115) 100%,
+    rgb(130, 22, 115) 100%
+  );
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  border: none;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+}
+
+.sm-box3 {
+  background: linear-gradient(
+    90deg,
+    rgba(132, 23, 115, 1) 0%,
+    rgba(132, 23, 115, 1) 0%,
+    rgba(78, 11, 117, 1) 100%,
+    rgba(78, 11, 117, 1) 100%
+  );
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    rgb(132, 23, 115) 0%,
+    rgb(132, 23, 115) 0%,
+    rgb(78, 11, 117) 100%,
+    rgb(78, 11, 117) 100%
+  );
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto auto;
+  border: none;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image-source: none;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-width: 1 1 1 1;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+}
+.border-outline {
+  border: 1px solid #d9d9d9 !important;
+}
+
+.bgclr {
+  background-color: #f5f5f5;
+}
+
+.oj-web-applayout-header-title {
+  color: #333;
+  text-align: left;
+  font-size: 21px;
+  font-weight: normal;
+  margin-top: 15px;
+  padding: 10px;
+  font-family: palatino;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.tileExpand {
+  margin-right: 10px;
+  color: #b2bbbf;
+}
+
+.tileExpand:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.filterSelected {
+  color: #009862;
+}
+
+.pad-top {
+  padding-top: 5px;
+}
+.oj-button-text {
+  font-weight: normal;
+}
+.flyover {
+  left: 150%;
+  overflow: hidden;
+  position: fixed;
+  width: 50%;
+  opacity: 0.9;
+  z-index: 1050;
+
+  transition: left 0.6s ease-out 0s;
+}
+
+.flyover-centered {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.flyover.in {
+  left: 50%;
+}
+.flyover-bottom {
+  bottom: 10px;
+}
+.glyphicon {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999;
+}
+
+.first {
+  float: left;
+}
+.second {
+  float: left;
+  clear: left;
+}
+#sched table {
+  border-collapse: collapse;
+}
+#sched thead {
+}
+#sched thead,
+#sched tbody {
+  display: block;
+}
+#sched th,
+#sched td {
+  padding: 8px 10px;
+  width: 130px;
+  box-sizing: border-box;
+}
+#sched tbody {
+  height: 160px;
+  overflow-y: scroll;
+}
+
+.bg-plant {
+  background-color: #00897b;
+}
+.bg-warehouse {
+  background-color: #00acc1;
+}
+.bg-transit {
+  background-color: #fb8c00;
+}
+.font-size-label {
+  font-size: 20px;
+}
+.font-size-text {
+  font-size: 14px;
+}
+
+.fa-15x {
+  font-size: 1.5em;
+}
+
+#chatbot {
+  border: 1px solid #333;
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+#endDrawer {
+  height: 500px;
+  z-index: 99;
+  position: fixed;
+  bottom: 0%;
+}
+
+.container {
+  width: 580px;
+  height: 340px;
+  position: relative;
+}
+
+.cardface {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.backside {
+  transform: rotateY(180deg);
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #dee2e6;
+}
+
+::ng-deep ul > li:before {
+  visibility: hidden;
+}
